@@ -28,12 +28,13 @@ multi-video-tracker/
 │── README.md # documentation
 
 ## 📂 Project Structure
+```
 object-tracking-project/
 │── videos/                  # raw input videos
 │── tracking_data/           # 10 CSV file
 │                  
 │── main.ipynb               # where all csv file turn into one dataset for applying ml model 
-
+```
 
 
 
