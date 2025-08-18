@@ -3,6 +3,9 @@
 This project tracks a single moving object across **multiple videos** using OpenCV object trackers 
 (CSRT, KCF, MOSSE), with optional **auto-initialization** via motion detection and **Kalman filter smoothing**.
 
+## 🎥 Demo
+![Demo](demo-small.gif)
+
 ---
 
 ## 🚀 Features
@@ -58,12 +61,13 @@ object-tracking-project/
  
 **Run the Tracker**
 
-Manual ROI Selection
+Manual ROI Selection/Automatic ROI
   ```bash
   python multi_video_tracker.py --videos ./videos --output ./runs/track --tracker csrt --display
   
-Automatic ROI
-  ```bash
+
+
+  
   python multi_video_tracker.py --videos ./videos --output ./runs/track --auto-init --auto-frames 60
 
 
@@ -75,12 +79,11 @@ video_tracked.mp4 → annotated with bounding boxes + trajectories
 
 video_track.csv → per-frame tracking info:
 
-```bash
-frame	time_s	x	y	w	h	cx	cy
-0	0.0000	123.0	200.0	50.0	80.0	148.0	240.0
+   
+   frame	time_s	x	y	w	h	cx	cy
+   0	0.0000	123.0	200.0	50.0	80.0	148.0	240.0
 
 ⚡ **Notes**
 
 opencv-contrib-python is required for CSRT/MOSSE trackers.
-
 If tracking fails, you’ll see "Tracking lost" message on video.
