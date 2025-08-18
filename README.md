@@ -61,13 +61,13 @@ object-tracking-project/
  
 **Run the Tracker**
 
-Manual ROI Selection/Automatic ROI
+1. **Manual ROI Selection**
   ```bash
   python multi_video_tracker.py --videos ./videos --output ./runs/track --tracker csrt --display
   
+2. **Automatic ROI**
 
-
-  
+   ```bash
   python multi_video_tracker.py --videos ./videos --output ./runs/track --auto-init --auto-frames 60
 
 
@@ -78,8 +78,8 @@ video_tracked.mp4 → annotated with bounding boxes + trajectories
 video_track.csv → per-frame tracking info:
 
    
-   frame	time_s	x	y	w	h	cx	cy
-   0	0.0000	123.0	200.0	50.0	80.0	148.0	240.0
+frame	time_s	x	y	w	h	cx	cy
+0	0.0000	123.0	200.0	50.0	80.0	148.0	240.0
 
 **Notes**
 
