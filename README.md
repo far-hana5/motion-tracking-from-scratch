@@ -19,6 +19,7 @@ This project tracks a single moving object across **multiple videos** using Open
 
 
 ## 📂 Project Structure
+```
 multi-video-tracker/
 │── .venv/ # Python virtual environment
 │── videos/ # input videos
@@ -26,6 +27,7 @@ multi-video-tracker/
 │── multi_video_tracker.py 
 │── requirements.txt # Python dependencies
 │── README.md # documentation
+```
 
 ## 📂 Project Structure
 ```
@@ -47,17 +49,21 @@ object-tracking-project/
    python -m venv .venv
 
 2. **Activate virtual environment**
+   ```bash
    .venv\Scripts\Activate
 
 3. **Install requirements**
+    ```bash
      pip install -r requirements.txt
  
 **Run the Tracker**
 
 Manual ROI Selection
+  ```bash
   python multi_video_tracker.py --videos ./videos --output ./runs/track --tracker csrt --display
   
 Automatic ROI
+  ```bash
   python multi_video_tracker.py --videos ./videos --output ./runs/track --auto-init --auto-frames 60
 
 
@@ -69,6 +75,7 @@ video_tracked.mp4 → annotated with bounding boxes + trajectories
 
 video_track.csv → per-frame tracking info:
 
+```bash
 frame	time_s	x	y	w	h	cx	cy
 0	0.0000	123.0	200.0	50.0	80.0	148.0	240.0
 
