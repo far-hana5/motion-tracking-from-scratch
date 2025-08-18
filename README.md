@@ -71,19 +71,17 @@ Manual ROI Selection/Automatic ROI
   python multi_video_tracker.py --videos ./videos --output ./runs/track --auto-init --auto-frames 60
 
 
-📊 **Output**
+**Output**
 
 For each input video:
-
 video_tracked.mp4 → annotated with bounding boxes + trajectories
-
 video_track.csv → per-frame tracking info:
 
    
    frame	time_s	x	y	w	h	cx	cy
    0	0.0000	123.0	200.0	50.0	80.0	148.0	240.0
 
-⚡ **Notes**
+**Notes**
 
 opencv-contrib-python is required for CSRT/MOSSE trackers.
 If tracking fails, you’ll see "Tracking lost" message on video.
